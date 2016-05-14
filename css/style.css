@@ -1,0 +1,224 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background: #37474F;
+}
+
+::-moz-selection {
+       background-color: rgba(55, 71, 79, .6);
+       color: #f1f1f1;
+}
+
+/* Works in Safari */
+::selection {
+       background-color: rgba(55, 71, 79, .6);
+       color: #f1f1f1;
+}
+
+.center {
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+a, a:link, a:hover, a:active, a:focus, a:visited {
+  text-decoration: none;
+  color: #546E7A;
+}
+.main {
+	position: relative;
+	width: 100%;
+	max-width: 650px;
+	height: 100vh;
+	background-color: #ECEFF1;
+	box-shadow: 0 0 50px rgba(0,0,0,.6);
+	overflow: hidden;
+}
+.main .list{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: auto;
+	padding-bottom: 90px;
+}
+.overlay {
+	width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 2;
+    padding-bottom: 90px;
+    background-color: #f1f1f1;
+}
+.main .controls {
+	height: 90px;
+	box-shadow: 0 0 15px rgba(0,0,0,.4);
+	text-align: center;
+}
+.main .controls button {
+	margin: 10px;
+	border: none;
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 3px;
+	width: 100px;
+	outline: none;
+}
+.main .controls .buttons #all {
+	background-color: #37474F;
+	color: #f1f1f1;
+}
+.main .controls .buttons #online {
+	background-color: #4CAF50;
+	color: #f1f1f1;
+}
+.main .controls .buttons #offline {
+	background-color: #BDBDBD;
+	color: #f1f1f1;
+}
+.main .controls .title {
+	font-weight: 200;
+    font-size: 1.8em;
+    text-align: center;
+    padding-top: 10px;
+}
+.list .user {
+	border-top: 1px solid rgba(0,0,0,.2);
+	position: relative;
+	height: 100px;
+	width: 100%;
+	 font-weight: 400;
+	overflow: hidden;
+	position: relative; 
+	line-height: 130px;
+	max-height: 130px; 
+	margin-right: -1em;
+	padding-right: 1em;
+}
+.list .user .image {
+	position: relative;
+}
+.list .user .image .logo {
+	width: 100px;
+    border-radius: 50%;
+    transform: scale(.7);
+    box-shadow: 0 0 10px rgba(0,0,0,.6);
+}
+.list .user .name {
+	position: absolute;
+    height: 100%;
+    line-height: 85px;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+.list .user .stream {
+	color: #E64A19;
+	position: absolute;
+    height: 100%;
+    line-height: 130px;
+    margin-left: 10px;
+    padding-right: 60px;
+}
+.list .user .game {
+	color: initial;
+	font-weight: 200;
+	position: relative;
+	top: 2px;	
+}
+.list .user .stream .live-icon {
+	color: #E64A19;
+	vertical-align: middle;
+	font-size: 1.5em;
+}
+.list .user .live-tw-online {
+	color: #4CAF50;
+	float: right;
+    font-size: 2em;
+    line-height: 100px;
+    margin-right: 20px;
+}
+.list .user .no-user {
+	color: #BF360C;
+	float: right;
+    font-size: 1.7em;
+    line-height: 100px;
+    margin-right: 20px;
+}
+.list .user .live-tw-offline {
+	color: #BDBDBD;
+    float: right;
+    font-size: 2em;
+    line-height: 100px;
+    margin-right: 20px;
+}
+@media (max-width: 360px){
+	.live-tw-offline,
+	.live-tw-online{
+		display: none;
+	}
+	.list .user .name {
+	position: absolute;
+    height: 100%;
+    line-height: 85px;
+    font-weight: 400;
+    font-size: 1em;
+}
+.hide {
+	display: none;
+}
